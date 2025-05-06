@@ -4,7 +4,7 @@
   "description": "Test Automation",
   "main": "index.js",
   "scripts": {
-    "test:registerUsers": "cypress run --spec cypress/e2e/tests/registerUsers.cy.js",
+    "build": "cypress run --spec cypress/e2e/tests/registerUsers.cy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
