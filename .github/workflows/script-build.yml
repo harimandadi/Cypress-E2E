@@ -1,4 +1,4 @@
-name: Regression End-to-end 
+name: Regression End-to-end
 
 on: push
 
@@ -12,4 +12,5 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
-      
+        with:
+          command: npm run test:registerUsers
