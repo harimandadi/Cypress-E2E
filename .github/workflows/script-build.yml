@@ -1,4 +1,4 @@
-name: Regression End-to-end
+name: Sanity TestCases
 
 on: push
 
