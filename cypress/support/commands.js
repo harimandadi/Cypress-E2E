@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('BankManagerLogin', (usrname) => {
+    cy.visit(Cypress.env('URL'))
+    cy.get('button[ng-click*="manager"]').click()
+    cy.get('button[ng-click*="addCust()"]').click();
+    //cy.get('[ng-model=fName]').type(usrname);
+})

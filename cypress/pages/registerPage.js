@@ -1,13 +1,15 @@
 export class registerPage{
 
 webLocarors= {
-    sampleForm: '[href="https://www.way2automation.com/angularjs-protractor/banking/registrationform.html"]',
+    sampleFormBtn: '[href*="registrationform.html"]',
+    bankManagerBtn: '[ng-click*="manager"]',
     firstname: '#firstName',
     lastName: '#lastName',
     email: '#email',
     password: '#password',
     gender: '#gender',
     submitButton:'[type="submit"]'
+
 }
 OpenURL(url){
     cy.visit(Cypress.env('URL'))
@@ -24,13 +26,16 @@ enterEmail(email){
 enterPassword(password){
     cy.get(this.webLocarors.password).type(password)
 }
-selectGender(gender){
-    cy.get(this.webLocarors.password).select(gender)
+selectGender(){
+    cy.get(this.webLocarors.gender).select(1)
 }
 clickSubmitButton(){
     cy.get(this.webLocarors.submitButton).click()
 }
 clicksampleForm(){
-    cy.get(this.webLocarors.sampleForm).click()
+    cy.get(this.webLocarors.sampleFormBtn).click()
+}
+clickbankManagerBtn(){
+    cy.get(this.webLocarors.bankManagerBtn).click()
 }
 }
