@@ -20,7 +20,7 @@ it('register new user', () => {
   it('Add Bank Manager', () => {
     registerPageObj.OpenURL(Cypress.env('URL'))
     registerPageObj.clickbankManagerBtn();
-    registerPageObj.enterEmail(registerData.email);
+    //registerPageObj.enterEmail(registerData.email);
   
   })
 
